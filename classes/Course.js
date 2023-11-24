@@ -1,8 +1,3 @@
-class Student {
-    constructor() {
-        this.name = "";
-    }
-}
 
 class Course {
     constructor(name) {
@@ -10,19 +5,15 @@ class Course {
         this.grades = [];
     }
 
-    add_grade(student, grade) {
+    addGrade(student, grade) {
         this.grades.push([student, grade]);
     }
 
-    get_grades() {
+    getGrades() {
         return this.grades;
     }
 
-    set_grade(student, grade) {
-        this.grades.push([student, grade]);
-    }
-
-    get_average_grade() {
+    getAverageGrade() {
         let average = -1;
         if (this.grades.length > 0) {
             let total = 0;
@@ -34,9 +25,13 @@ class Course {
         return average;
     }
 
-    toString() {
-        return this.name;
-    }
+    discription() {
+        return `${this.name}`
+    }  
+
+    getName() {
+        return this.name
+    } 
 }
 
-module.exports = {Course}
+module.exports = Course
